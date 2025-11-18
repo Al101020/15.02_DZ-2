@@ -1,0 +1,89 @@
+/* .Task-1 {} */
+
+.filters {
+  width: 400px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.All {
+  width: 40px;
+  height: 15px;
+  border: 1px solid black;
+  background-color: white;
+
+  padding: 5px;
+  margin: 5px 2px;
+
+  cursor: pointer;
+}
+
+.Websites {
+  width: 70px;
+  height: 15px;
+  border: 1px solid black;
+  background-color: white;
+
+  padding: 5px;
+  margin: 5px 2px;
+
+  cursor: pointer;
+}
+
+.Flayers {
+  width: 60px;
+  height: 15px;
+  border: 1px solid black;
+  background-color: white;
+
+  padding: 5px;
+  margin: 5px 2px;
+
+  cursor: pointer;
+}
+
+.Business-Cards {
+  width: 100px;
+  height: 15px;
+  border: 1px solid black;
+  background-color: white;
+
+  padding: 5px;
+  margin: 5px 2px;
+
+  cursor: pointer;
+}
+
+.All:hover {
+  background: black;
+  color: rgb(252, 251, 251);
+}
+
+.Websites:hover {
+  background: black;
+  color: rgb(252, 251, 251);
+}
+
+.Flayers:hover {
+  background: black;
+  color: rgb(252, 251, 251);
+}
+
+.Business-Cards:hover {
+  background: black;
+  color: rgb(252, 251, 251);
+}
+
+.filters {
+  margin: 3px auto;
+}
+
+.filteredList {
+  display: inline;
+}
+
+.image {
+  margin: 2px 3px;
+  width: 200px;
+}
