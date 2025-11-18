@@ -40,17 +40,23 @@ function Portfolio() {
       <Toolbar
       filters={["All", "Websites", "Flayers", "Business Cards"]}
       selected="All"
-      onSelectFilter={(filter) => { // console.log(filter); // applyingFilter(filter);
-        const titleFilter = document.querySelector('.titleFilter');
+      onSelectFilter={(filter) => { 
+        console.log(filter);
+        // applyingFilter(filter);
+        // const titleFilter = document.querySelector('.titleFilter');
         const filteredList = document.querySelector('.filteredList');
-        
+        const arrayfiltersDivChildren = Array.from(document.querySelector('div.filters').children);
+
         if (filter === 'All') {
-          filteredList.innerHTML = '';
-          titleFilter.innerHTML = '';
-          const title = document.createElement('h1');
-          title.classList = 'titleFilter';
-          title.textContent = filter;
-          titleFilter.appendChild(title);
+          arrayfiltersDivChildren.forEach((el) => {
+            if (el.classList[0] === filter) {
+              el.className += ' black-wheat';
+            } else {
+              el.classList.remove('black-wheat');
+            };
+          });
+
+          filteredList.innerHTML = '';          // titleFilter.innerHTML = '';
 
           projects.forEach(project => {
             const img = document.createElement('img');
@@ -58,13 +64,54 @@ function Portfolio() {
             img.src = project.img;
             filteredList.appendChild(img);
           });
-        } else {
+        } else if (filter === 'Websites') {
+          arrayfiltersDivChildren.forEach((el) => {
+            if (el.classList[0] === filter) {
+              el.className += ' black-wheat';
+            } else {
+              el.classList.remove('black-wheat');
+            };
+          });
+
           filteredList.innerHTML = '';
-          titleFilter.innerHTML = '';
-          const title = document.createElement('h1');
-          title.classList = 'titleFilter';
-          title.textContent = filter;
-          titleFilter.appendChild(title);
+
+          projects.forEach(project => {
+            const img = document.createElement('img');
+            if (project.category === filter) {
+              img.classList = 'image';
+              img.src = project.img;
+              filteredList.appendChild(img);
+            }
+          });
+        } else if (filter === 'Flayers') {
+          arrayfiltersDivChildren.forEach((el) => {
+            if (el.classList[0] === filter) {
+              el.className += ' black-wheat';
+            } else {
+              el.classList.remove('black-wheat');
+            };
+          });
+
+          filteredList.innerHTML = '';
+
+          projects.forEach(project => {
+            const img = document.createElement('img');
+            if (project.category === filter) {
+              img.classList = 'image';
+              img.src = project.img;
+              filteredList.appendChild(img);
+            }
+          });
+        } else if (filter === 'Business Cards') {
+          arrayfiltersDivChildren.forEach((el) => {
+            if (el.classList[0] === 'Business-Cards') {
+              el.className += ' black-wheat';
+            } else {
+              el.classList.remove('black-wheat');
+            };
+          });
+
+          filteredList.innerHTML = '';
 
           projects.forEach(project => {
             const img = document.createElement('img');
@@ -75,6 +122,9 @@ function Portfolio() {
             }
           });
         };
+
+
+        
       }}/>
     </>
   )

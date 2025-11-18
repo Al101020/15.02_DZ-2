@@ -57,23 +57,30 @@
 
 .All:hover {
   background: black;
-  color: rgb(252, 251, 251);
+  color: wheat;
 }
 
 .Websites:hover {
   background: black;
-  color: rgb(252, 251, 251);
+  color: wheat;
 }
 
 .Flayers:hover {
   background: black;
-  color: rgb(252, 251, 251);
+  color: wheat;
 }
 
 .Business-Cards:hover {
   background: black;
-  color: rgb(252, 251, 251);
+  color: wheat;
 }
+
+
+.black-wheat {
+  background: black;
+  color: wheat;
+}
+
 
 .filters {
   margin: 3px auto;
