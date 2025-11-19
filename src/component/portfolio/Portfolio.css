@@ -1,4 +1,10 @@
-/* .Task-1 {} */
+.Task-1 {
+  background-color: rgb(163, 252, 122);
+}
+
+.title-1 {
+    margin: 10px 0;
+}
 
 .filters {
   width: 400px;
@@ -56,22 +62,22 @@
 }
 
 .All:hover {
-  background: black;
+  background: rgb(105, 29, 29);
   color: wheat;
 }
 
 .Websites:hover {
-  background: black;
+  background: rgb(105, 29, 29);
   color: wheat;
 }
 
 .Flayers:hover {
-  background: black;
+  background: rgb(105, 29, 29);
   color: wheat;
 }
 
 .Business-Cards:hover {
-  background: black;
+  background: rgb(105, 29, 29);
   color: wheat;
 }
 

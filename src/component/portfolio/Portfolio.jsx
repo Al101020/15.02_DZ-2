@@ -7,25 +7,27 @@ import projects from'./projects.jsx';
 // function Toolbar({ filters, selected, onSelectFilter }) {
 function Toolbar({ filters, onSelectFilter }) {
   return (
-    <div className="Task-1">
-      <h3 className="title-1">Task-1</h3>
-      <div className="filters">
-        {filters.map((item) => {
-          // const classname = item === selected ? "active" : "button"; // ?
-          return (
-            <div
-              key={item}
-              className={item.replace(/\s/g, '-')}
-              onClick={() => {
-                onSelectFilter(item);
-              }}
-            >{item}</div>
-          );
-        })}
+    <>
+      <div className="Task-1">
+        <h3 className="title-1">Task-1</h3>
+        <div className="filters">
+          {filters.map((item) => {
+            // const classname = item === selected ? "active" : "button"; // ?
+            return (
+              <div
+                key={item}
+                className={item.replace(/\s/g, '-')}
+                onClick={() => {
+                  onSelectFilter(item);
+                }}
+              >{item}</div>
+            );
+          })}
+        </div>
+        <div className="titleFilter"></div>
+        <div className="filteredList"></div>
       </div>
-      <div className="titleFilter"></div>
-      <div className="filteredList"></div>
-    </div>
+    </>
   );
 };
 

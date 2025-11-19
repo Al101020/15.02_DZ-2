@@ -1,0 +1,32 @@
+.Task-2 {
+  margin: 20px 0 0 0;
+  background-color: darkorange;
+  min-height: 70px;
+  min-width: 100px;
+}
+
+.icon {
+  margin: 0 10px 0 auto;
+  width: 70px;
+  height: 20px;
+  background: black;
+  color: wheat;
+}
+
+.icon:hover {
+  margin: 0 5px 0 auto;
+  width: 75px;
+  height: 20px;
+  background: black;
+  color: wheat;
+}
+
+.title-2 {
+  margin: 10px 0;
+}
+
+.list-products {
+  margin: 0 5px;
+  background-color: rgb(133, 74, 1);
+  min-height: 10px;
+}
