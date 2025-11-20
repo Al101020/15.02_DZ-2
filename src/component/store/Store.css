@@ -3,16 +3,19 @@
 .Task-2 {
   margin: 20px 0 0 0;
   background-color: darkorange;
-  min-height: 70px;
+  min-height: 90px;
   min-width: 100px;
 }
 
-.icon {
+.iCon {
   margin: 0 10px 0 auto;
   width: 40px;
   height: 40px;
-  background: black;
-  color: wheat;
+  /* background: black;
+  color: wheat; */
+
+  cursor: 'pointer';
+  display: block;
 }
 
 .icon:hover {
@@ -21,6 +24,8 @@
   height: 40px;
   background: black;
   color: wheat;
+
+  cursor: 'pointer'
 }
 
 .title-2 {
@@ -28,7 +33,7 @@
 }
 
 .list-products {
-  margin: 0 5px;
+  margin: 5px 5px 0 5px;
   background-color: rgb(133, 74, 1);
   min-height: 10px;
 }
@@ -43,4 +48,15 @@
   background-color: #fff;
   border: none;
   cursor: pointer;
+}
+
+.iconModule {
+  color: #fff;
+  font-size: 1px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+
+  background-image: url('./icon/module.png');
+  background-size: cover;
 }
