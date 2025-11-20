@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 .Task-2 {
   margin: 20px 0 0 0;
   background-color: darkorange;
@@ -7,16 +9,16 @@
 
 .icon {
   margin: 0 10px 0 auto;
-  width: 70px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background: black;
   color: wheat;
 }
 
 .icon:hover {
   margin: 0 5px 0 auto;
-  width: 75px;
-  height: 20px;
+  width: 45px;
+  height: 40px;
   background: black;
   color: wheat;
 }
@@ -29,4 +31,16 @@
   margin: 0 5px;
   background-color: rgb(133, 74, 1);
   min-height: 10px;
+}
+
+/* .iconList {
+
+} */
+
+.material-icons {
+  color: #696969;
+  font-size: 40px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
 }

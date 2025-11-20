@@ -18,7 +18,9 @@ function Store() {
     // view_list(!view_module) 
     // подсмотрел было так:const toggleView = () => {setIsListView(!isListView);};
 
-    console.log('!!!!!!!');
+    const aaa = document.querySelector('.icon');
+    // aaa.classList.add('iconList')
+    console.log(aaa.className);
   };
   
   return (
