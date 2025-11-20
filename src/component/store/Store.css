@@ -60,3 +60,25 @@
   background-image: url('./icon/module.png');
   background-size: cover;
 }
+
+.ViewModules {
+  position: relative;
+}
+
+.shopCard {
+  display: inline-block;
+  margin: 25px;
+}
+
+/* .nameCard {} */
+
+.imgCard {
+  width: 150px;
+  height: 150px;
+}
+
+/* .card {}
+
+.card-price {}
+
+.card-button {} */

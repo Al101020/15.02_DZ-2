@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './Store.css';
-// import products from './products.jsx';
+import products from './products.jsx';
+import ShopCard from './ShopCard.jsx';
+import ShopItem from './ShopItem.jsx';
 
 // function ViewList({ items }) {
 function ViewList() {
@@ -9,7 +11,7 @@ function ViewList() {
 
   // return (
   //   <div className='ViewList'>
-  //     {items.map((item) => (
+  //     {products.map((item) => (
   //       <ShopItem item={ item } key={ index + 1 } />
   //     ))}
   //   </div>
@@ -21,13 +23,13 @@ function ViewModules() {
   let index = 0;
   console.log(index + ' - ViewModules');
 
-  // return (
-  //   <div className="ViewModules">
-  //     {cards.map((card) => (
-  //       <ShopCard card={ card } key={ index + 1 } />
-  //     ))}
-  //   </div>
-  // );
+  return (
+    <div className="ViewModules">
+      {products.map((card) => (
+        <ShopCard card={ card } key={ index + 1 } />
+      ))}
+    </div>
+  );
 };
 
 
@@ -46,14 +48,14 @@ function Store() {
   const [icon, setListView] = useState('view_list');
 
   const switchingViews = () => {
-    const iccon = document.querySelector('.iCon');
+    const iCon = document.querySelector('.iCon');
     // const listProducts = document.querySelector('.list-products');
 
     if (icon === 'view_list') {
-      iccon.className='iCon iconModule';
+      iCon.className='iCon iconModule';
       return setListView('view_module');
     } else if (icon === 'view_module') {
-      iccon.className='iCon material-icons';
+      iCon.className='iCon material-icons';
       return setListView('view_list');
     };
   };
@@ -65,11 +67,11 @@ function Store() {
         <IconSwitch icon={'view_list'} onSwitch={switchingViews}/>
         <div className='list-products'>
           {icon === "view_list" ? (
-            // <ViewModules cards={products} />
-            <ViewModules />
+            <ViewModules cards={products} />
+            // <ViewModules />
           ) : (
-            // <ViewList items={products} />
-            <ViewList />
+            <ViewList items={products} />
+            // <ViewList />
           )}
         </div>
       </div>
