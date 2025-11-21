@@ -4,37 +4,31 @@ import products from './products.jsx';
 import ShopCard from './ShopCard.jsx';
 import ShopItem from './ShopItem.jsx';
 
-// function ViewList({ items }) {
 function ViewList() {
   let index = 0;
   console.log(index + ' - ViewList');
 
-  // return (
-  //   <div className='ViewList'>
-  //     {products.map((item) => (
-  //       <ShopItem item={ item } key={ index + 1 } />
-  //     ))}
-  //   </div>
-  // );
-};
-
-// function ViewModules({ cards }) {
-function ViewModules() {
-  let index = 0;
-  console.log(index + ' - ViewModules');
-
   return (
-    <div className="ViewModules">
-      {products.map((card) => (
-        <ShopCard card={ card } key={ index + 1 } />
+    <div className='view-list'>
+      {products.map((item) => (
+        <ShopItem item={ item } key={ index++ } />
       ))}
     </div>
   );
 };
 
+function ViewModules() {
+  let index = 0;
+  console.log(index + ' - ViewModules');
 
-
-
+  return (
+    <div className="view-modules">
+      {products.map((card) => (
+        <ShopCard card={ card } key={ index++ } />
+      ))}
+    </div>
+  );
+};
 
 const IconSwitch = ({ icon, onSwitch }) => {
   return (
@@ -49,10 +43,9 @@ function Store() {
 
   const switchingViews = () => {
     const iCon = document.querySelector('.iCon');
-    // const listProducts = document.querySelector('.list-products');
 
     if (icon === 'view_list') {
-      iCon.className='iCon iconModule';
+      iCon.className='iCon icon-module';
       return setListView('view_module');
     } else if (icon === 'view_module') {
       iCon.className='iCon material-icons';
@@ -68,10 +61,8 @@ function Store() {
         <div className='list-products'>
           {icon === "view_list" ? (
             <ViewModules cards={products} />
-            // <ViewModules />
           ) : (
             <ViewList items={products} />
-            // <ViewList />
           )}
         </div>
       </div>
