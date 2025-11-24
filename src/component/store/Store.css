@@ -8,14 +8,10 @@
   min-width: 100px;
 }
 
-.iCon {
+.divIcon {
   margin: 0 10px 0 auto;
   width: 40px;
   height: 40px;
-  /* background: black;
-  color: wheat; */
-
-  cursor: 'pointer';
   display: block;
 }
 
@@ -104,7 +100,6 @@
   border-radius: 10px;
   cursor: pointer;
 }
-
 
 .view-list {
   position: relative;

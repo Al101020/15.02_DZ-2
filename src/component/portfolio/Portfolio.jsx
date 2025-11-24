@@ -1,53 +1,22 @@
-import React from 'react';
-// import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react';
 import './Portfolio.css';
 import projects from'./projects.jsx';
-
-// function Toolbar({ filters, selected, onSelectFilter }) {
-function Toolbar({ filters, onSelectFilter }) {
-  return (
-    <>
-      <div className="Task-1">
-        <h3 className="title-1">Task-1</h3>
-        <div className="filters">
-          {filters.map((item) => {
-            // const classname = item === selected ? "active" : "button"; // ?
-            return (
-              <div
-                key={item}
-                className={item.replace(/\s/g, '-')}
-                onClick={() => {
-                  onSelectFilter(item);
-                }}
-              >{item}</div>
-            );
-          })}
-        </div>
-        <div className="titleFilter"></div>
-        <div className="filteredList"></div>
-      </div>
-    </>
-  );
-};
-
-// function applyingFilter(filter) {   // console.log('--- applyingFilter - ' + filter);
-//   const filteredList = document.querySelector('.filteredList');
-//   console.log(filteredList);
-// }
+import Toolbar from'./Toolbar.jsx';
 
 function Portfolio() {
+  const root = useState(document.querySelector('#root'));
+
   return (
     <>
       <Toolbar
-      filters={["All", "Websites", "Flayers", "Business Cards"]}
-      selected="All"
-      onSelectFilter={(filter) => { 
+        filters={["All", "Websites", "Flayers", "Business Cards"]}
+        selected="All"
+        onSelectFilter={(filter) => { 
         console.log(filter);
-        // applyingFilter(filter);
-        // const titleFilter = document.querySelector('.titleFilter');
-        const filteredList = document.querySelector('.filteredList');
-        const arrayfiltersDivChildren = Array.from(document.querySelector('div.filters').children);
+        
+        const filteredList = Array.from(root.children[0].children[0].children[3]);
+        const arrayfiltersDivChildren = Array.from(root.children[0].children[0].children[1]);
 
         if (filter === 'All') {
           arrayfiltersDivChildren.forEach((el) => {
@@ -58,7 +27,8 @@ function Portfolio() {
             };
           });
 
-          filteredList.innerHTML = '';          // titleFilter.innerHTML = '';
+          console.log(filteredList);
+          filteredList.innerHTML = '';
 
           projects.forEach(project => {
             const img = document.createElement('img');
@@ -125,11 +95,9 @@ function Portfolio() {
           });
         };
 
-
-        
       }}/>
     </>
   )
 }
 
-export default Portfolio
+export default Portfolio;
