@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react';
+import { useState } from 'react';
 import './Portfolio.css';
-import projects from'./projects.jsx';
-import Toolbar from'./Toolbar.jsx';
+import projects from './projects.jsx';
+import Toolbar from './Toolbar.jsx';
 
 function Portfolio() {
-  const root = useState(document.querySelector('#root'));
+  const [root] = useState(document.querySelector('#root'));
 
   return (
     <>
@@ -14,8 +13,8 @@ function Portfolio() {
         selected="All"
         onSelectFilter={(filter) => { 
         console.log(filter);
-        
-        const filteredList = Array.from(root.children[0].children[0].children[3]);
+
+        const filteredList = root.children[0].children[0].children[3];
         const arrayfiltersDivChildren = Array.from(root.children[0].children[0].children[1]);
 
         if (filter === 'All') {
@@ -27,7 +26,6 @@ function Portfolio() {
             };
           });
 
-          console.log(filteredList);
           filteredList.innerHTML = '';
 
           projects.forEach(project => {
@@ -94,6 +92,7 @@ function Portfolio() {
             }
           });
         };
+        
 
       }}/>
     </>
