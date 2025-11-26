@@ -2,7 +2,7 @@ function Toolbar({ filters, onSelectFilter }) {
 
   return (
     <>
-      <div className="Task-1">
+      {/* <div className="Task-1"> */}
         <h3 className="title-1">Task-1</h3>
         <div className="filters">
           {filters.map((item) => {
@@ -17,9 +17,9 @@ function Toolbar({ filters, onSelectFilter }) {
             );
           })}
         </div>
-        <div className="titleFilter"></div>
-        <div className="filteredList"></div>
-      </div>
+        {/* <div className="titleFilter"></div> */}
+        {/* <div className="filteredList"></div> */}
+      {/* </div> */}
     </>
   );
 };
