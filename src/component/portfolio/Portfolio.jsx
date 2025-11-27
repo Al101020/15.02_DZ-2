@@ -4,11 +4,9 @@ import projects from './projects.jsx';
 import Toolbar from './Toolbar.jsx';
 import ProjectList from './ProjectList.jsx';
 
-
 function Portfolio() {
   const [state, setState] = useState('All');
 
-  // const filteredProjects = projects.filter((project) => {// у меня было
   const listFiltered = projects.filter((project) => {
     if (state === 'All') {
       return true;
@@ -16,7 +14,6 @@ function Portfolio() {
       return project.category === state;
     }
   });
-
   return (
     <>
       <Toolbar

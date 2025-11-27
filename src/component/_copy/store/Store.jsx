@@ -6,11 +6,14 @@ import IconSwitch from './functions.jsx';
 import { ViewList } from './functions.jsx';
 import { ViewModules } from './functions.jsx';
 
+
+
 function Store() {
   const [icon, setListView] = useState('view_list');
 
   const switchingViews = () => {
     const divIcon = document.querySelector('.divIcon');
+
     if (icon === 'view_list') {
       divIcon.className = 'divIcon icon-module';
       return setListView('view_module');
