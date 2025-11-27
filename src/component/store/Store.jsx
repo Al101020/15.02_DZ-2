@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import './Store.css';
 import products from './products.jsx';
 
-import IconSwitch from './functions.jsx';
-import { ViewList } from './functions.jsx';
-import { ViewModules } from './functions.jsx';
+import IconSwitch from './IconSwitch.jsx';
+import ViewList from './ViewList.jsx';
+import ViewModules from './ViewModules.jsx';
 
 function Store() {
   const [icon, setListView] = useState('view_list');
