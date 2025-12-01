@@ -1,12 +1,13 @@
+import uniqid from 'uniqid';
+
 function ProjectList({projects}) {
   
-  let projectKey = 0;
   return (
     <div className="filteredList">
       {projects.map((project) => {
         return (
           <img
-            key={projectKey++}
+            key={uniqid()}
             className="image"
             src={project.img}
             alt={projects.category}

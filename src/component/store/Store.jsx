@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Store.css';
-import products from './products.jsx';
+import products from './products.js';
 
 import IconSwitch from './IconSwitch.jsx';
 import ViewList from './ViewList.jsx';

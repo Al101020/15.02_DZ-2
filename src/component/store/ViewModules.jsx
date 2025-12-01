@@ -1,4 +1,4 @@
-import products from './products.jsx';
+import products from './products.js';
 import ShopCard from './ShopCard.jsx';
 
 export default function ViewModules() {

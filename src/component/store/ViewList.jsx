@@ -1,4 +1,4 @@
-import products from './products.jsx';
+import products from './products.js';
 import ShopItem from './ShopItem.jsx';
 
 export default function ViewList() {

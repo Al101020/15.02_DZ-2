@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Portfolio.css';
-import projects from './projects.jsx';
+import projects from './projects.js';
 import Toolbar from './Toolbar.jsx';
 import ProjectList from './ProjectList.jsx';
 

@@ -13,7 +13,7 @@
   display: flex;
 }
 
-.All {
+.all {
   width: 40px;
   height: 15px;
   border: 1px solid black;
@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-.Websites {
+.websites {
   width: 70px;
   height: 15px;
   border: 1px solid black;
@@ -37,7 +37,7 @@
   cursor: pointer;
 }
 
-.Flayers {
+.flayers {
   width: 60px;
   height: 15px;
   border: 1px solid black;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.Business-Cards {
+.business-cards {
   width: 100px;
   height: 15px;
   border: 1px solid black;
@@ -61,22 +61,22 @@
   cursor: pointer;
 }
 
-.All:hover {
+.all:hover {
   background: rgb(105, 29, 29);
   color: wheat;
 }
 
-.Websites:hover {
+.websites:hover {
   background: rgb(105, 29, 29);
   color: wheat;
 }
 
-.Flayers:hover {
+.flayers:hover {
   background: rgb(105, 29, 29);
   color: wheat;
 }
 
-.Business-Cards:hover {
+.business-cards:hover {
   background: rgb(105, 29, 29);
   color: wheat;
 }
