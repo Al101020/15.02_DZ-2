@@ -1,15 +1,13 @@
 import React, {useState} from 'react';
 import './Store.css';
 import products from './products.js';
-
 import IconSwitch from './IconSwitch.jsx';
 import ViewList from './ViewList.jsx';
 import ViewModules from './ViewModules.jsx';
 
 function Store() {
-  // const [icon, setListView] = useState('view_list');
   const [icon, setListView] = useState(true);
-
+  
   const switchingViews = () => {
     if (icon === true) {
       return setListView(false);
@@ -22,9 +20,9 @@ function Store() {
     <>
       <div className='Task-2'>
         <h3 className='title-2'>Task-2</h3>
-        <IconSwitch isIcon={true} onSwitch={switchingViews}/>
+        <IconSwitch isIcon={icon} onSwitch={switchingViews}/>
         <div className='list-products'>
-          {icon === true ? (
+          {icon ? (
             <ViewModules cards={products} />
           ) : (
             <ViewList items={products} />
