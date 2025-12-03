@@ -1,4 +1,6 @@
 function btnBlWr(e) {
+  console.log(e.target);
+
   const allFilter = e.target.parentElement.getElementsByTagName('*');
   
   for (let i = 0; i < allFilter.length; i++) {
@@ -10,3 +12,5 @@ function btnBlWr(e) {
 };
 
 export default btnBlWr;
+
+// console.log(e);

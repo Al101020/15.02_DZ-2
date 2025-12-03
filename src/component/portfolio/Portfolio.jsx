@@ -20,6 +20,7 @@ function Portfolio() {
         filters={['All', 'Websites', 'Flayers', 'Business Cards']}
         selected={state}
         onSelectFilter={setState}
+        // onClick={console.log(state)}
       />
       <ProjectList projects={listFiltered} />
     </>
