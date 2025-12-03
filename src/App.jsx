@@ -1,4 +1,3 @@
-import './App.css';
 import Portfolio from './component/portfolio/Portfolio';
 import Store from './component/store/Store'
 

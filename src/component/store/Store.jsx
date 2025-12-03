@@ -9,13 +9,9 @@ function Store() {
   const [icon, setListView] = useState(true);
   
   const switchingViews = () => {
-    if (icon === true) {
-      return setListView(false);
-    } else if (icon === false) {
-      return setListView(true);
-    };
+    return setListView(!icon);
   };
-  
+
   return (
     <>
       <div className='Task-2'>
